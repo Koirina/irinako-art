@@ -1,54 +1,364 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Irina Ko - Watercolour Artist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-            font-family: Georgia, serif;
-            background-color: #FAF8F3;
-            color: #2F2F2F;
-            line-height: 1.6;
+```
+<title>Irina Ko — Watercolour Artist</title>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        background-color: #FAF8F3;
+        color: #2F2F2F;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    /* HEADER */
+
+    header {
+        padding: 55px 0 25px;
+        text-align: center;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 42px;
+        font-weight: normal;
+        letter-spacing: 1px;
+    }
+
+    header p {
+        margin: 8px 0 28px;
+        font-size: 17px;
+        color: #666;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 32px;
+        font-size: 15px;
+    }
+
+    nav a {
+        color: #444;
+        text-decoration: none;
+    }
+
+    nav a:hover {
+        text-decoration: underline;
+    }
+
+    /* SECTIONS */
+
+    section {
+        padding: 65px 0;
+    }
+
+    section h2 {
+        margin: 0 0 15px;
+        font-size: 28px;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    .section-intro {
+        max-width: 650px;
+        margin: 0 auto 40px;
+        text-align: center;
+        color: #666;
+    }
+
+    /* ARTWORKS */
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+    }
+
+    .artwork {
+        margin: 0;
+    }
+
+    .artwork img {
+        display: block;
+        width: 100%;
+        height: 340px;
+        object-fit: cover;
+    }
+
+    .artwork figcaption {
+        padding-top: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    /* EXHIBITIONS */
+
+    .exhibitions {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .exhibition {
+        padding: 18px 0;
+        border-bottom: 1px solid #DDD8CF;
+    }
+
+    .exhibition:first-child {
+        border-top: 1px solid #DDD8CF;
+    }
+
+    .exhibition strong {
+        font-weight: normal;
+    }
+
+    /* ABOUT */
+
+    .about {
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    /* CONTACT */
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact a {
+        color: #444;
+    }
+
+    /* FOOTER */
+
+    footer {
+        padding: 35px 0 50px;
+        text-align: center;
+        font-size: 13px;
+        color: #888;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+        header {
+            padding-top: 35px;
         }
 
-        h1 {
-            text-align: center;
+        header h1 {
+            font-size: 34px;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
+        nav {
+            gap: 18px;
+            flex-wrap: wrap;
         }
 
-        .hero {
-            text-align: center;
-            margin-bottom: 40px;
+        section {
+            padding: 45px 0;
         }
 
         .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
         }
-    </style>
+
+        .artwork img {
+            height: 250px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .container {
+            padding: 0 18px;
+        }
+
+        .gallery {
+            grid-template-columns: 1fr;
+        }
+
+        .artwork img {
+            height: auto;
+            max-height: none;
+        }
+    }
+</style>
+```
+
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>Irina Ko</h1>
-    <p>Watercolour Artist</p>
+<header>
+    <div class="container">
+        <h1>Irina Ko</h1>
+        <p>Watercolour Artist</p>
+
+```
+    <nav>
+        <a href="#artworks">Artworks</a>
+        <a href="#exhibitions">Exhibitions</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </div>
+```
 
-<h2>Portfolio</h2>
+</header>
 
-<p>
-A collection of selected watercolour paintings inspired by waterways,
-landscapes and everyday moments.
-</p>
+<main>
+
+```
+<!-- ARTWORKS -->
+
+<section id="artworks">
+    <div class="container">
+
+        <h2>Artworks</h2>
+
+        <p class="section-intro">
+            Selected watercolour paintings inspired by waterways,
+            landscapes, flowers and everyday moments.
+        </p>
+
+        <div class="gallery">
+
+            <!-- Artwork images will go here -->
+
+            <figure class="artwork">
+                <img src="images/artwork-01.jpg" alt="Artwork title">
+                <figcaption>Artwork Title</figcaption>
+            </figure>
+
+            <figure class="artwork">
+                <img src="images/artwork-02.jpg" alt="Artwork title">
+                <figcaption>Artwork Title</figcaption>
+            </figure>
+
+            <figure class="artwork">
+                <img src="images/artwork-03.jpg" alt="Artwork title">
+                <figcaption>Artwork Title</figcaption>
+            </figure>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- EXHIBITIONS -->
+
+<section id="exhibitions">
+    <div class="container">
+
+        <h2>Exhibitions</h2>
+
+        <p class="section-intro">
+            Selected exhibitions and artistic activities.
+        </p>
+
+        <div class="exhibitions">
+
+            <div class="exhibition">
+                <strong>Exhibition Name</strong><br>
+                Gallery / Location · Year
+            </div>
+
+            <div class="exhibition">
+                <strong>Exhibition Name</strong><br>
+                Gallery / Location · Year
+            </div>
+
+            <div class="exhibition">
+                <strong>Exhibition Name</strong><br>
+                Gallery / Location · Year
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+    <div class="container">
+
+        <h2>About</h2>
+
+        <div class="about">
+
+            <p>
+                I am a Sydney-based watercolour artist inspired by
+                waterways, landscapes, gardens and the small moments
+                of everyday life.
+            </p>
+
+            <p>
+                My work explores light, colour and atmosphere through
+                the fluid and spontaneous nature of watercolour.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+    <div class="container">
+
+        <h2>Contact</h2>
+
+        <div class="contact">
+
+            <p>
+                For enquiries, exhibitions or artwork information:
+            </p>
+
+            <p>
+                <a href="mailto:YOUR-EMAIL-HERE">
+                    YOUR-EMAIL-HERE
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+</section>
+```
+
+</main>
+
+<footer>
+    © 2026 Irina Ko
+</footer>
 
 </body>
 </html>
