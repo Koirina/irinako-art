@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Irina Ko - Watercolour Artist</title>
+
+    <style>
+        body {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: Georgia, serif;
+            background-color: #FAF8F3;
+            color: #2F2F2F;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>Irina Ko</h1>
+    <p>Watercolour Artist</p>
+</div>
+
+<h2>Portfolio</h2>
+
+<p>
+A collection of selected watercolour paintings inspired by waterways,
+landscapes and everyday moments.
+</p>
+
+</body>
+</html>
